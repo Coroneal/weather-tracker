@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather tracker</title>
+    <link rel="stylesheet" href="/resources/css/calories-tracker.css">
+</head>
+<body class="pure-skin-theme" id="caloriesCounterApp" ng-controller="CaloriesTrackerCtrl">
+
+
+<header class="page-header pure-g not-ready" ng-class="{'app-ready': vm.appReady}">
+    <div class="pure-u-lg-1-2 pure-u-1">
+
+        <a class="pure-menu-heading" href="#">
+            <img class="logo" src="/resources/img/weather-icon.png">
+        </a>
+        <span class="header-element page-title">Weather tracker</span>
+
+    </div>
+</header>
+
+<main class="container not-ready" ng-class="{'app-ready': vm.appReady}" ng-cloak>
+
+    <div class="container">
+        <div ng-controller="WeatherCtrl">
+            <div id="datetime">
+                <h1>{{ date.raw | date:'hh : mm : ss' }}</h1>
+
+                <h2>{{ date.raw | date:'EEEE d, MMMM yyyy' }}</h2>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script type="text/javascript" data-main="/resources/js/run-calories-tracker"
+        src="/resources/bower_components/requirejs/require.js"></script>
+
+</body>
+</html>
