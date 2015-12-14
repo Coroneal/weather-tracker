@@ -1,0 +1,84 @@
+
+header.page-header {
+    background: #2d3e50;
+    color: #eee;
+}
+
+span.page-title {
+    margin-left: 0.4em;
+    font-size: 137%;
+    vertical-align: top;
+}
+
+.logo {
+    height: 3.1em;
+    padding: 0.1em;
+    margin-top: 0.5em;
+    margin-left: 0.3em;
+    margin-bottom: 0.25em;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.header-element {
+    display: inline-block;
+    vertical-align: top;
+    height: 68px;
+    line-height: 68px;
+
+}
+
+#datetime {
+    text-align: center;
+}
+
+#datetime h1 {
+    font-size: 6.1em;
+    color: #555555;
+}
+
+#datetime h2 {
+    font-size: 1.0em;
+    color: #555555;
+}
+
+#container > div {
+    display: inline-block;
+    /*border: solid 1px #000;*/
+    margin: 100px 15px 100px 80px;
+}
+
+#container {
+    /*border: solid 1px #ff0000;*/
+    /*text-align: center;*/
+    margin: 0px auto;
+    width: 40%;
+    font-size: 1.0em;
+    color: #555555;
+}
+
+/*DAYS*/
+
+.day1 {
+    background-color: red;
+    height: 33%;
+    width: 100%;
+    background-size: cover;
+    position:fixed;
+}
+
+.day2 {
+    background-color: blue;
+    height: 33%;
+    width: 100%;
+    background-size: cover;
+}
+
+.day3 {
+    background-color: bisque;
+    height: 33%;
+    width: 100%;
+    background-size: cover;
+}

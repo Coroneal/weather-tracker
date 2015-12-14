@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather tracker</title>
-    <link rel="stylesheet" href="/resources/css/calories-tracker.css">
+    <link rel="stylesheet" href="/resources/css/weather-tracker.css">
 </head>
 <body class="pure-skin-theme" id="caloriesCounterApp" ng-controller="CaloriesTrackerCtrl">
 
@@ -29,6 +29,19 @@
 
                 <h2>{{ date.raw | date:'EEEE d, MMMM yyyy' }}</h2>
             </div>
+        </div>
+    </div>
+
+    <div>
+        <!--<div  class="day1" ng-style="{'background-image':'url(/static/'+imgURL+')'}">-->
+        <div  class="day1" ng-style="{'background-image':'url(/resources/img/sunny.jpg)'}">
+                    dfgdfgdf
+        </div>
+        <div class="day2" ng-style="{'background-image':'url(/resources/img/cloud.jpg)'}">
+               dfgdfgdfg
+        </div>
+        <div class="day3" ng-style="{'background-image':'url(/resources/img/rain.jpg)'}">
+                   sdfsdf
         </div>
     </div>
 
