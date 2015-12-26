@@ -6,52 +6,54 @@
     <title>Weather tracker</title>
     <link rel="stylesheet" href="/resources/css/weather-tracker.css">
 </head>
-<body class="pure-skin-theme" id="caloriesCounterApp" ng-controller="CaloriesTrackerCtrl">
+<body id="weatherApp" ng-controller="WeatherTrackerCtrl">
 
 
 <header class="page-header pure-g not-ready" ng-class="{'app-ready': vm.appReady}">
     <div class="pure-u-lg-1-2 pure-u-1">
-
         <a class="pure-menu-heading" href="#">
             <img class="logo" src="/resources/img/weather-icon.png">
         </a>
         <span class="header-element page-title">Weather tracker</span>
-
     </div>
 </header>
 
-<main class="container not-ready" ng-class="{'app-ready': vm.appReady}" ng-cloak>
-
-    <div class="container">
-        <div ng-controller="WeatherCtrl">
-            <div id="datetime">
+<main class="not-ready" ng-controller="WeatherCtrl" ng-class="{'app-ready': vm.appReady}">
+    <div class="day" ng-style="{'background-image':'url(/resources/img/{{actualDay.desc}}.jpg)'}">
+        <!--<div class="day" ng-style={{actualDay.backg}}>-->
+        <div class="roundDay">
+            <div class="datetime">
                 <h1>{{ date.raw | date:'hh : mm : ss' }}</h1>
 
                 <h2>{{ date.raw | date:'EEEE d, MMMM yyyy' }}</h2>
+
+                <h2>{{actualDay.temp}} {{actualDay.desc}}</h2>
+            </div>
+        </div>
+
+        <div class="roundDay day1" ng-style="{'background-image':'url(/resources/img/{{ day1.desc }}.jpg)'}">
+            <div class="datetime">
+                <h1>{{day1.temp}} </h1>
+
+                <h2>{{day1.desc}}</h2>
+            </div>
+        </div>
+
+        <div class="roundDay day2" ng-style="{'background-image':'url(/resources/img/{{ day2.desc }}.jpg)'}">
+            <div class="datetime">
+                <h1>{{day2.temp}} </h1>
+
+                <h2>{{day2.desc}}</h2>
+            </div>
+        </div>
+        <div class="roundDay day3" ng-style="{'background-image':'url(/resources/img/{{ day3.desc }}.jpg)'}">
+            <div class="datetime">
+                <h1>{{day3.temp}} </h1>
+
+                <h2>{{day3.desc}}</h2>
             </div>
         </div>
     </div>
-
-    <div class="day2" ng-style="{'background-image':'url(/resources/img/cloud.jpg)'}">
-        <div class="day1" ng-style="{'background-image':'url(/resources/img/sunny.jpg)'}">
-                   ghjghjgh
-        </div>
-        <!--<div class="day2"  ng-style="{'background-image':'url(/resources/img/cloud.jpg)'}">-->
-               <!--ghjghjgh-->
-        <!--</div>-->
-        <div class="day3"  ng-style="{'background-image':'url(/resources/img/rain.jpg)'}">
-               ghjghjgh
-        </div>
-    </div>
-
-    <!--<div class='pageOption'>-->
-        <!--<a href='#' class='option' data-inf='photo'>-->
-            <!--<img src='http://imgsrc.hubblesite.org/hu/db/images/hs-2009-28-b-large_web.jpg'>-->
-        <!--</a>-->
-        <!--<a href='#' class='option' data-inf='cinema'>-->
-            <!--<img src='http://imgsrc.hubblesite.org/hu/db/images/hs-2013-06-a-large_web.jpg'>-->
-        <!--</a>-->
-    <!--</div>-->
 </main>
 
 <script type="text/javascript" data-main="/resources/js/run-calories-tracker"

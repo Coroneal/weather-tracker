@@ -1,13 +1,11 @@
-
 header.page-header {
     background: #2d3e50;
     color: #eee;
 }
 
 span.page-title {
-    /*margin-left: 0.4em;*/
+    margin-left: 0.4em;
     font-size: 137%;
-    vertical-align: top;
 }
 
 .logo {
@@ -23,88 +21,72 @@ header a {
 }
 
 .header-element {
-    display: inline-block;
     vertical-align: top;
-    height: 68px;
     line-height: 68px;
 
 }
 
-#datetime {
+.datetime {
+    margin-top: 35%;
     text-align: center;
 }
 
-#datetime h1 {
-    font-size: 6.1em;
-    color: #555555;
+.datetime h1 {
+    font-size: 5vh;
+    color: white;
 }
 
-#datetime h2 {
-    font-size: 1.0em;
-    color: #555555;
-}
-
-#container > div {
-    /*display: inline-block;*/
-    /*border: solid 1px #000;*/
-    /*margin: 100px 15px 100px 80px;*/
+.datetime h2 {
+    font-size: 3vh;
+    color: white;
 }
 
 #container {
-    /*border: solid 1px #ff0000;*/
-    /*text-align: center;*/
-    margin: 0px auto;
-    /*width: 40%;*/
     font-size: 1.0em;
     color: #555555;
 }
 
 /*DAYS*/
 
-.wrapper{
-    margin-left:auto;
-    margin-right:auto;
-    height:auto;
-    width:auto;
-}
-
-.day2{
+.day {
     border: 1px solid black;
-    height: 50%;
-    /*position: relative;*/
-    overflow:hidden;
-    /*transform: rotate(5deg);*/
-    /*-moz-transform: rotate(5deg);*/
-    /*-webkit-transform: rotate(5deg);*/
+    height: 100vh;
+    weight: 100vw;
 }
 
-.day2 .day1 {
-    /*height: 530px;*/
-    height: 730px;
-    width: 300%;
-    margin-top: -300px;
-    margin-left: -50px;
-    background-color: blue;
-    /*position: absolute;*/
-    /*left:-50px;*/
-    /*bottom:-500px;*/
-
-    transform: rotate(-5deg);
-    -moz-transform: rotate(-5deg);
-    -webkit-transform: rotate(-5deg);
-
+.roundDay {
+    margin-top: 5vh;
+    margin-left: 60vh;
+    background-size: 170%;
+    background: rgba(255, 255, 255, 0.3);
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 60vh;
+    height: 60vh;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3), inset 0 5px 5px rgba(0, 0, 0, 0.5)
 }
 
-
-.day2 .day3 {
-    border: 1px solid black;
-    height: 430px;
-    width: 300%;
-    margin-top: 500px;
-    margin-left: -50px;
-    transform: rotate(5deg);
-    -moz-transform: rotate(5deg);
-    -webkit-transform: rotate(5deg);
+.roundDay.day1 {
+    margin-top: -65vh;
+    margin-left: 100vh;
+    background-size: 170%;
+    width: 20vh;
+    height: 20vh;
 }
 
+.roundDay.day2 {
+    margin-top: -0vh;
+    margin-left: 110vh;
+    background-size: 170%;
+    width: 20vh;
+    height: 20vh;
+}
 
+.roundDay.day3 {
+    margin-top: 0vh;
+    margin-left: 100vh;
+    background-size: 170%;
+    width: 20vh;
+    height: 20vh;
+}

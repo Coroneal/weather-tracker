@@ -1,7 +1,6 @@
 angular.module('frontendServices', [])
     .service('MealService', ['$http', '$q', function ($http, $q) {
-        return {
-        }
+        return {}
     }])
     .service('WeatherService', ['$http', '$q', function ($http, $q) {
         return {
@@ -11,10 +10,8 @@ angular.module('frontendServices', [])
                 $http.get('/weather/')
                     .then(function (response) {
                         if (response.status == 200) {
-                            console.log(response.data);
                             deferred.resolve(response.data);
-                        }
-                        else {
+                        } else {
                             deferred.reject('Error retrieving list of meals');
                         }
                     });
@@ -24,21 +21,22 @@ angular.module('frontendServices', [])
                 var deferred = $q.defer();
 
                 var key = '20e818b3efbe65c01ea2b3c7629937c4';
-                var days = '3';
+                var days = '4';
                 var cityID = '7530768';
                 var url = 'http://api.openweathermap.org/data/2.5/forecast?';
 
                 var address = url + 'id=' + cityID + '&cnt=' + days + '&APPID=' + key;
 
-                $http.jsonp(address, { params: {
-                    callback: 'JSON_CALLBACK'
-                }})
+                $http.jsonp(address, {
+                        params: {
+                            callback: 'JSON_CALLBACK'
+                        }
+                    })
                     .success(function (data, status, headers, config) {
                         deferred.resolve(data);
                     }).error(function (data, status, headers, config) {
-                        console.log('Error retrieving weather info');
-                        deferred.reject(err);
-                    });
+                    deferred.reject(err);
+                });
                 return deferred.promise;
             }
         }

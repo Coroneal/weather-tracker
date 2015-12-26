@@ -9,7 +9,7 @@ require.config({
         angular: '../bower_components/angular/angular',
         angularMessages: '../bower_components/angular-messages/angular-messages',
         frontendServices: 'frontend-services',
-        caloriesCounterApp: "calories-counter-app"
+        weatherApp: "weather-app"
     },
     shim: {
         angular: {
@@ -21,14 +21,14 @@ require.config({
         frontendServices: {
             deps: ['angular']
         },
-        caloriesCounterApp: {
+        weatherApp: {
             deps: ['angular', 'angularMessages', 'frontendServices']
         }
     }
 });
 
-require(['caloriesCounterApp'], function () {
+require(['weatherApp'], function () {
 
-    angular.bootstrap(document.getElementById('caloriesCounterApp'), ['caloriesCounterApp']);
+    angular.bootstrap(document.getElementById('weatherApp'), ['weatherApp']);
 
 });
