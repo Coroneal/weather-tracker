@@ -19,7 +19,8 @@
 </header>
 
 <main class="not-ready" ng-controller="WeatherCtrl" ng-class="{'app-ready': vm.appReady}">
-    <div class="day" ng-style="{'background-image':'url(/resources/img/{{actualDay.desc}}.jpg)'}">
+    <div class="day" ng-style="getBackgroundStyle(actualDay.desc)">
+    <!--<div class="day" ng-style="{'background-image':'url(/resources/img/{{actualDay.desc}}.jpg)'}">-->
         <!--<div class="day" ng-style={{actualDay.backg}}>-->
         <div class="roundDay">
             <div class="datetime">
